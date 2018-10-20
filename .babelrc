@@ -8,8 +8,6 @@
     ]
   ],
   "presets": [
-    "react",
-    "stage-0",
     [
       "env",
       {
@@ -17,6 +15,8 @@
           "browsers": ["last 2 versions"]
         }
       }
-    ]
+    ],
+    "react",
+    "stage-3"
   ]
 }

@@ -4,6 +4,7 @@
   "description": "Blog",
   "main": "index.js",
   "scripts": {
+    "start": "ENV=${ENV:-development}; sls offline start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,13 +20,16 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
-    "babel-loader": "8.0.4",
+    "babel-eslint": "10.0.1",
     "babel-plugin-source-map-support": "2.0.1",
+    "babel-plugin-styled-components": "1.6.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
     "eslint": "5.7.0",
     "eslint-config-airbnb": "17.1.0",
+    "eslint-loader": "2.1.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
@@ -40,14 +44,18 @@
     "aws-sdk": "2.339.0",
     "aws-serverless-express": "3.3.5",
     "axios": "0.18.0",
+    "babel-loader": "7.1.2",
     "express": "4.16.4",
     "express-http-proxy": "1.4.0",
+    "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.7",
     "react-router-config": "4.4.0-beta.1",
     "react-router-dom": "4.3.1",
-    "redux": "4.0.1"
+    "redux": "4.0.1",
+    "serialize-javascript": "1.5.0",
+    "styled-components": "4.0.2"
   }
 }

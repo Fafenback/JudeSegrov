@@ -10,13 +10,10 @@ custom:
   env: ${env:ENV, 'development'} # Defaults to "development" if not provided (see package.json scripts)
   envs:
     development: # XXX "development" environment is "localhost", therefore we don't deploy against AWS at all
-      profile: ''
+      profile: JudeSegrov@dev
       memorySize:
-    staging:
-      profile: ''
-      memorySize: 128 # XXX Takes around 6-10s to warm up the lambda with 128MB
     production:
-      profile: ''
+      profile: JudeSegrov@prod
       memorySize: 128
   serverless-offline:
     port: 3000 # We run our SLS/Express endpoints there 
@@ -48,7 +45,7 @@ provider:
 
 functions:
   server:
-    handler: src/functions/server/server.handler
+    handler: src/server/functions/server.handler
     events:
     - http:
         method: GET
