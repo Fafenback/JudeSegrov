@@ -1,8 +1,8 @@
 import "babel-polyfill";
 import express from "express";
 import renderer from "../helpers/renderer";
-import { matchRoutes } from "react-router-config";
-import Routes from "../../client/Routes";
+// import { matchRoutes } from "react-router-config";
+// import Routes from "../../client/Routes";
 
 const app = express();
 
@@ -35,7 +35,7 @@ app.get("*", (req, res) => {
   //     res.status(404);
   //   }
   const context = {};
-    res.send(renderer(req));
+    res.send(renderer(req, store, context));
   // });
 });
 

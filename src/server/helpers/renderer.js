@@ -1,12 +1,11 @@
-import React from 'react';
-import {renderToString} from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import serialize from 'serialize-javascript';
-import Routes from '../../client/Routes';
-import { renderRoutes } from 'react-router-config';
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import serialize from "serialize-javascript";
+import Routes from "../../client/Routes";
+import { renderRoutes } from "react-router-config";
 //import { Helmet } from 'react-helmet';
-
 
 export default (req, store, context) => {
   const content = renderToString(
@@ -19,7 +18,7 @@ export default (req, store, context) => {
 
   //const helmet = Helmet.renderStatic();
 
-  return`
+  return `
     <html>
       <head>
 
@@ -31,6 +30,6 @@ export default (req, store, context) => {
         <script src='bundle.js'></script>
       </body>
     </html>
-  `
-}
+  `;
+};
 // <script>window.INITIAL_STATE = ${serialize(store.getState())}</script>
