@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "source-map-support",
+    "transform-runtime",
+    [
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ]
+  ],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ],
+    "react",
+    "stage-3"
+  ]
+}
