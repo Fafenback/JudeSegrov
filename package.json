@@ -4,7 +4,9 @@
   "description": "Blog",
   "main": "index.js",
   "scripts": {
-    "start": "ENV=${ENV:-development}; sls offline start",
+    "postinstall": "sls dynamodb install",
+    "start": "ENV=${ENV:-development};ENV=$ENV sls dynamodb start && ENV=$ENV sls offline start",
+    "deploy": "ENV=$ENV sls deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

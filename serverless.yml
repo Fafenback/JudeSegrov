@@ -19,9 +19,6 @@ custom:
       memorySize: 128
       DB_RECIPE: db-${self:custom.env}-recipe
   dynamodb:
-  # If you only want to use DynamoDB Local in some stages, declare them here
-    stages:
-      - ${self:custom.env}
     start:
       port: 5000
       inMemory: true

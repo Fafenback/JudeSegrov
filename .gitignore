@@ -72,5 +72,8 @@ typings/
 # Serverless directories
 .serverless
 
+# Dynamodb directories
+.dynamodb
+
 # Webpack directories
 .webpack
