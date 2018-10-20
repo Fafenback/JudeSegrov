@@ -6,7 +6,7 @@ const App = ({ route }) => {
   return <div>{renderRoutes(route.routes)}</div>;
 };
 
-App.proptypes = {
+App.propTypes = {
   route: PropTypes.array.isRequired
 };
 
