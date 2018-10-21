@@ -42,10 +42,12 @@
     "serverless-plugin-aws-alerts": "1.2.4",
     "serverless-webpack": "5.2.0",
     "webpack": "4.21.0",
+    "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.1.2",
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
+    "@awspilot/dynamodb": "1.2.8",
     "aws-sdk": "2.339.0",
     "aws-serverless-express": "3.3.5",
     "axios": "0.18.0",
@@ -57,9 +59,10 @@
     "react-dom": "16.5.2",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.7",
-    "react-router-config": "4.4.0-beta.1",
-    "react-router-dom": "4.3.1",
+    "react-router-config": "1.0.0-beta.4",
+    "react-router-dom": "4.2.2",
     "redux": "4.0.1",
+    "redux-thunk": "2.3.0",
     "serialize-javascript": "1.5.0",
     "serverless-dynamodb-local": "0.2.35",
     "styled-components": "3.4.5"

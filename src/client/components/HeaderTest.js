@@ -16,4 +16,6 @@ class HeaderTest extends Component {
     }
 }
 
-export default HeaderTest;
+export default {
+    component: HeaderTest
+};

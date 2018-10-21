@@ -1,7 +1,6 @@
 const slsw = require("serverless-webpack");
 const nodeExternals = require("webpack-node-externals");
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -17,7 +16,7 @@ module.exports = {
     // module: "empty",
   },
   // Generate sourcemaps for proper error messages
-  devtool: "source-map",
+  // devtool: "source-map",
   // We use webpack-node-externals to excludes all node deps. (like aws-sdk)
   // You can manually set the externals too.
   externals: [nodeExternals()],
