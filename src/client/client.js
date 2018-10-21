@@ -6,9 +6,8 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { renderRoutes } from "react-router-config";
 import Routes from "./Routes";
-import reducers from "./reducers";
 
-const store = createStore(reducers, window.INITIAL_STATE, applyMiddleware());
+const store = {};
 
 ReactDOM.hydrate(
   <Provider store={store}>

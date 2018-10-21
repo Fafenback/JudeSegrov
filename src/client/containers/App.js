@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { renderRoutes } from "react-router-config";
+import HeaderTest from "../components/HeaderTest";
 
 const App = ({ route }) => {
-  return <div>{renderRoutes(route.routes)}</div>;
+  return <div>
+  <HeaderTest/>
+  {renderRoutes(route.routes)}
+  </div>;
 };
 
 App.propTypes = {

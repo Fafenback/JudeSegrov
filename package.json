@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "sls dynamodb install",
-    "start": "ENV=${ENV:-development};ENV=$ENV sls dynamodb start && ENV=$ENV sls offline start",
+    "start": "ENV=${ENV:-development}; concurrently --kill-others \"ENV=$ENV webpack --config webpack.client.js --watch\" \"ENV=$ENV sls dynamodb start\"  \"ENV=$ENV sls offline start\"",
     "deploy": "ENV=$ENV sls deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +30,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-3": "6.24.1",
+    "concurrently": "4.0.1",
     "eslint": "5.7.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-loader": "2.1.1",
@@ -41,6 +42,7 @@
     "serverless-plugin-aws-alerts": "1.2.4",
     "serverless-webpack": "5.2.0",
     "webpack": "4.21.0",
+    "webpack-cli": "3.1.2",
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {

@@ -25,14 +25,18 @@ export default (req, store, context) => {
   //const helmet = Helmet.renderStatic();
 
   return `
+    <!DOCTYPE html>
     <html>
       <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
         ${styleTags}
       </head>
       <body>
         <div id='root'>${content}</div>
         
-        <script src='bundle.js'></script>
+        <script src='bundle.js'/>
       </body>
     </html>
   `;

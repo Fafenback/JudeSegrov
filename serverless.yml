@@ -20,7 +20,7 @@ custom:
       DB_RECIPE: db-${self:custom.env}-recipe
   dynamodb:
     start:
-      port: 5000
+      port: 4000
       inMemory: true
       migrate: true
   tableThroughputs:

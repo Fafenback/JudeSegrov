@@ -7,6 +7,7 @@ import renderer from "../helpers/renderer";
 const app = express();
 
 //Middleware
+app.use(express.static('public'));
 
 //Routing
 app.get("*", (req, res) => {
